@@ -26,7 +26,7 @@ void loop() {
   uint8_t p = finger.getImage();
   if (p == FINGERPRINT_NOFINGER) {
     Serial.println("SAFETYON");
-    servo1.write(0);
+    servo1.write(126);
     delay(1000);
   }
   else
@@ -38,7 +38,7 @@ void loop() {
       if(fingerprintID == 1)
       {
         Serial.println("SAFETYOFF");
-        servo1.write(140);
+        servo1.write(145);
         delay(1000);
       }
   }
